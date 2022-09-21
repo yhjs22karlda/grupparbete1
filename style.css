@@ -12,29 +12,15 @@ body {
 h2 {
     font: 900 45px/45px 'Frank Ruhl Libre', serif;
 }
+
 h3 {
     font: 900 32px/40px 'Frank Ruhl Libre', serif;
 }
+
 h4 {
     font: 700 16px/20px 'Frank Ruhl Libre', serif;
 }
-.header {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto auto;
-}
-.header section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.span1 {
-    font-weight: 700;
-}
-.header section button {
-    margin: 3rem 0 10rem;
-}
+
 .button {
     background-color: white;
     border: none;
@@ -49,6 +35,32 @@ h4 {
     color: white;
 }
 
+.bg-white {
+    background-color: white;
+}
+
+/* - - - - - - - - - - .header - - - - - - -  - - - */
+.header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.header section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header .span1 {
+    font-weight: 700;
+}
+
+.header section button {
+    margin: 3rem 0 10rem;
+}
+
 .header section:nth-child(1) {
     padding: 4rem 8rem 0 7rem;
     grid-column: span 3;
@@ -59,18 +71,22 @@ h4 {
     background-position: bottom right;
     background-repeat: no-repeat;
 }
+
 .header section:nth-child(1) h2 {
     margin-bottom: 0;
 }
+
 .header section:nth-child(1) h2,
 .header section:nth-child(1) p,
 .header section:nth-child(1) button {
     align-self: flex-start;
 }
+
 .header section:nth-child(2) {
     grid-column: span 3;
     background-color: #f17949;
 }
+
 .header section:nth-child(3) {
     grid-column: span 3;
     background-color: #ffb939;
@@ -81,15 +97,19 @@ h4 {
     margin: 0;
     font: 700 11px/13px 'Fira Sans', sans-serif;
 }
+
 .header section:nth-child(2) h3,
 .header section:nth-child(3) h3 {
     margin: 0rem;
 }
+
+/* - - - - - - - - - - nav - - - - - - - - - - */
 nav {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     height: 4rem;
 }
+
 nav a {
     text-decoration: none;
     color: black;
@@ -98,24 +118,185 @@ nav a {
     align-items: center;
     font: 12px/12px 'Fira Sans', sans-serif;
 }
+
 nav a:hover {
     background-color: #ccc;
 }
+
 nav a:nth-child(1) {
     grid-column: 2;
 }
-.current {
+
+nav .current {
     font-weight: bold;
 }
 
+/* - - - - - - - - - - main - - - - - - - - - - */
 main {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
+
 .content {
     grid-column: span 6;
     margin: 0;
 }
+
+        /* - - - - - - .main-top - - - - - - */
+.main-top {
+    display: flex;
+    background-color: #a9a19e;
+}
+
+.main-top section {
+    width: 50%;
+    padding: 5rem;
+}
+
+.main-top p {
+    padding-top: 2rem;
+}
+
+        /* - - - - - - .main-cards - - - - - - */
+.main-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: linear-gradient(#a9a19e 50%, #fab131 50%);
+}
+
+.main-cards .card {
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.main-cards .card figure {
+    width: 90%;
+    height: 150px;
+    margin-top: -1rem;
+}
+
+.main-cards .card p {
+    padding: 0 2rem 1.5rem;
+    font-size: .7rem;
+    text-align: center;
+    font: 700 11px/18px 'Fira Sans', sans-serif;
+}
+
+.main-cards .card:nth-child(1) figure {
+    background-color: #c7ddea;
+    background-image: url(bilder/child.png);
+    background-position: center 1rem;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+.main-cards .card:nth-child(2) figure {
+    background-color: #fab131;
+    background-image: url(bilder/adult.png);
+    background-position: center 1rem;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
+.main-cards .card:nth-child(3) figure {
+    background-color: #f17949;
+    background-image: url(bilder/old.png);
+    background-position: center 1rem;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+        /* - - - - - - .main-about - - - - - */
+.main-about {
+    background-color: #fab131;
+    padding: 2rem 12rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+        /* - - - - - .box - - - - - - */
+.box {
+    grid-column: span 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.box h3 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    color: rgba(0,0,0,.4);
+    margin: 0;
+}
+
+.box p {
+    padding: 7rem 3.5rem;
+    font: 500 17px/20px 'Fira Sans', sans-serif;
+}
+
+.box:nth-child(2) {
+    background-color: #c7ddea;
+}
+
+.box:nth-child(4) {
+    background-color: #ebebeb;
+}
+
+.box:nth-child(6) {
+    background-color: #f17949;
+}
+
+        /* - - - - - - .main-bottom - - - - - */
+.main-bottom {
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a9a19e;
+}
+.main-bottom a {
+    text-decoration: none;
+    color: black;
+}
+
+/* - - - - - - - - - footer - - - - - - - - - -*/
+footer {
+    width: 100%;
+    height: 15rem;
+    background-color: #777574;
+}
+
+
+/*===============  contact.html ===============*/
+.header2 {
+    background-color: #c7ddea;
+    background-image: url(bilder/man-and-child.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom -1rem right 8rem;
+}
+
+.header2 h2 {
+    grid-column: span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem;
+    margin: 0;
+}
+
+/*-----------------------------------------*/
 .content2 {
     grid-column: span 6;
     margin: 0;
@@ -123,16 +304,19 @@ main {
     display: flex;
     background-color: #a9a19e;
 }
+
 .content2 h2 {
     width: 50%;
     margin: 0;
 }
+
 .content2 form {
     width: 50%;
     display: flex;
     flex-direction: column;
     color: white;
 }
+
 .content2 button {
     align-self: flex-end;
 }
@@ -140,16 +324,19 @@ main {
 .content2 form p {
     margin: 0;
 }
+
 .content2 #text1 {
     padding: .5rem;
     margin-bottom: 2rem;
 }
+
 .content2 #textarea1 {
     padding: 1rem;
     margin-bottom: 2rem;
     font: 400 14px/14px 'Fira Sans', sans-serif;
 }
 
+/*--------------------------------------*/
 .content3 {
     background: no-repeat 50% 50%/5% url(bilder/needle.png),
                 no-repeat 100%/cover url(bilder/map-contact.png);
@@ -166,147 +353,12 @@ main {
     padding: 1rem;
     margin: 2rem 3rem;
 }
+
 .content3 section h2 {
     margin: .1rem .8rem;
 }
+
 .content3 section address {
     margin: .1rem .8rem;
     padding-top: .4rem;
-}
-
-.main-top {
-    display: flex;
-    background-color: #a9a19e;
-}
-.main-top section {
-    width: 50%;
-    padding: 5rem;
-}
-.main-top p {
-    padding-top: 2rem;
-}
-.main-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    background: linear-gradient(#a9a19e 50%, #fab131 50%);
-}
-.card {
-    width: 26%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-}
-.card figure {
-    width: 90%;
-    height: 150px;
-    margin-top: -1rem;
-}
-.card p {
-    padding: 0 2rem 1.5rem;
-    font-size: .7rem;
-    text-align: center;
-    font: 700 11px/18px 'Fira Sans', sans-serif;
-}
-.main-cards .card:nth-child(1) figure {
-    background-color: #c7ddea;
-    background-image: url(bilder/child.png);
-    background-position: center 1rem;
-    background-repeat: no-repeat;
-    background-size: 40%;
-}
-.main-cards .card:nth-child(2) figure {
-    background-color: #fab131;
-    background-image: url(bilder/adult.png);
-    background-position: center 1rem;
-    background-repeat: no-repeat;
-    background-size: 40%;
-}
-.main-cards .card:nth-child(3) figure {
-    background-color: #f17949;
-    background-image: url(bilder/old.png);
-    background-position: center 1rem;
-    background-repeat: no-repeat;
-    background-size: 70%;
-}
-
-.box {
-    grid-column: span 2;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: white;
-}
-.box h3 {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 2rem;
-    color: rgba(0,0,0,.4);
-    margin: 0;
-}
-.box p {
-    padding: 7rem 3.5rem;
-    font: 500 17px/20px 'Fira Sans', sans-serif;
-}
-.box:nth-child(2) {
-    background-color: #c7ddea;
-}
-.box:nth-child(4) {
-    background-color: #ebebeb;
-}
-.box:nth-child(6) {
-    background-color: #f17949;
-}
-
-
-.main-bottom {
-    background-color: #fab131;
-    padding: 2rem 12rem 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-main .bottom {
-    grid-column: span 6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #a9a19e;
-}
-main .bottom a {
-    text-decoration: none;
-    color: black;
-}
-
-footer {
-    width: 100%;
-    height: 15rem;
-    background-color: #777574;
-}
-
-.bg-white {
-    background-color: white;
-}
-
-.header2 {
-    background-color: #c7ddea;
-    background-image: url(bilder/man-and-child.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom -1rem right 8rem;
-}
-.header2 h2 {
-    /* font-size: 2rem; */
-    grid-column: span 6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8rem;
-    margin: 0;
 }
